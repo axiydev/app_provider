@@ -13,8 +13,8 @@ abstract class FruitRepository {
 class FruitProvider with ChangeNotifier implements FruitRepository {
   late final List<Fruit?>? _fruitList;
 
-  FruitProvider(this._fruitList);
-  final TextEditingController fruitNameController = TextEditingController();
+  FruitProvider(this._fruitList, {required this.fruitNameController});
+  final TextEditingController fruitNameController;
   final focusNode = FocusNode();
   @override
   void change(int index) {
@@ -76,6 +76,7 @@ class FruitProvider with ChangeNotifier implements FruitRepository {
   @override
   void createFruit(BuildContext context) {
     focusNode.requestFocus();
+    fruitNameController.text = 'shaftoli';
     if (fruitNameController.text.isEmpty) return;
     _fruitList!.add(Fruit(
         name: fruitNameController.text,
