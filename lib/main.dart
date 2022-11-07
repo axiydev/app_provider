@@ -3,7 +3,6 @@ import 'package:app/page/fruits/fruits_page.dart';
 import 'package:app/page/home_provider.dart';
 import 'package:app/page/home_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_driver/driver_extension.dart';
 import 'package:provider/provider.dart';
 
 /*
@@ -14,7 +13,7 @@ Created by Axmadjon Isaqov on 09:13:12 07.11.2022
 Theme:::Provider
 */
 void main() {
-  enableFlutterDriverExtension();
+  // enableFlutterDriverExtension();
   runApp(const MyApp());
 }
 

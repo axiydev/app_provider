@@ -76,7 +76,6 @@ class FruitProvider with ChangeNotifier implements FruitRepository {
   @override
   void createFruit(BuildContext context) {
     focusNode.requestFocus();
-    fruitNameController.text = 'shaftoli';
     if (fruitNameController.text.isEmpty) return;
     _fruitList!.add(Fruit(
         name: fruitNameController.text,
